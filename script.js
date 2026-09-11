@@ -1,4 +1,4 @@
-const BRAINCELL_DOWNLOAD_URL = "https://github.com/meicatzpt/Braincell/releases/download/v.7.0.7/Braincell-7.0.7-x64-setup.exe";
+const BRAINCELL_DOWNLOAD_URL = "https://github.com/meicatzpt/Braincell/releases/download/v7.0.9/Braincell-7.0.9-x64-setup.exe";
 const MEICAT_SHOP_URL = "";
 const CAR_STUDIO_DOWNLOAD_URL = "";
 const WORLD_AVAILABILITY = {
