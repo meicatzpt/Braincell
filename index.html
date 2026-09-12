@@ -324,15 +324,25 @@
           </div>
           <div class="world-cta" aria-label="Active world action">
             <span class="world-cta__status-label">Beta</span>
-            <button
-              class="world-cta__button"
-              type="button"
-              aria-label="Download Braincell app"
-              aria-disabled="true"
-              aria-describedby="world-cta-status"
-            >
-              Download App
-            </button>
+            <div class="world-cta__buttons">
+              <button
+                class="world-cta__button"
+                type="button"
+                aria-label="Download Braincell for Windows"
+                aria-disabled="true"
+                aria-describedby="world-cta-status"
+              >
+                Windows Download
+              </button>
+              <button
+                class="world-cta__button world-cta__button--macos"
+                type="button"
+                aria-label="Download Braincell for macOS"
+                hidden
+              >
+                macOS Download
+              </button>
+            </div>
             <span id="world-cta-status" class="visually-hidden">
               Download is not available yet.
             </span>

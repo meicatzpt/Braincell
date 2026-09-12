@@ -2765,6 +2765,12 @@ a {
   text-transform: uppercase;
 }
 
+.world-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
 .world-cta__button {
   min-width: 142px;
   padding: 11px 21px;

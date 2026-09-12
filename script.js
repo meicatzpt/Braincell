@@ -1,4 +1,5 @@
-const BRAINCELL_DOWNLOAD_URL = "https://github.com/meicatzpt/Braincell/releases/download/v.7.0.7/Braincell-7.0.7-x64-setup.exe";
+const BRAINCELL_DOWNLOAD_URL = "https://github.com/meicatzpt/Braincell/releases/download/v7.0.9/Braincell-7.0.9-x64-setup.exe";
+const BRAINCELL_MACOS_DOWNLOAD_URL = "https://github.com/meicatzpt/Braincell/releases/download/v7.0.10/Braincell-7.0.10-arm64.dmg";
 const MEICAT_SHOP_URL = "";
 const CAR_STUDIO_DOWNLOAD_URL = "";
 const WORLD_AVAILABILITY = {
@@ -21,6 +22,7 @@ const slideProgress = document.querySelector(".slide-progress");
 const worldCta = document.querySelector(".world-cta");
 const worldCtaLabel = document.querySelector(".world-cta__status-label");
 const worldCtaButton = document.querySelector(".world-cta__button");
+const worldCtaMacosButton = document.querySelector(".world-cta__button--macos");
 const worldCtaStatus = document.querySelector("#world-cta-status");
 const oyenImage = document.querySelector(".oyen-anchor__image");
 const chatFeatures = Array.from(document.querySelectorAll(".braincell-chat-feature"));
@@ -583,8 +585,8 @@ const ctaContent = {
   },
   braincell: {
     status: "Beta",
-    label: "Download App",
-    accessibleName: "Download Braincell app",
+    label: "Windows Download",
+    accessibleName: "Download Braincell for Windows",
     unavailableText: "Braincell download is not available yet.",
     url: BRAINCELL_DOWNLOAD_URL,
   },
@@ -728,6 +730,7 @@ function renderWorldCta() {
   worldCtaButton.setAttribute("aria-disabled", String(!isAvailable));
   worldCtaStatus.textContent = cta.unavailableText;
   worldCtaStatus.hidden = isAvailable;
+  worldCtaMacosButton.hidden = activeWorld !== "braincell";
 
   if (isAvailable) {
     worldCtaButton.removeAttribute("aria-describedby");
@@ -864,6 +867,10 @@ worldCtaButton.addEventListener("click", () => {
   const cta = ctaContent[activeWorld];
   if (!cta || !cta.url.trim()) return;
   window.location.assign(cta.url);
+});
+
+worldCtaMacosButton.addEventListener("click", () => {
+  window.location.assign(BRAINCELL_MACOS_DOWNLOAD_URL);
 });
 
 previousButton.addEventListener("click", () => changeActiveSlide(-1));
