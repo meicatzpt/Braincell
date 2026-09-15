@@ -2203,7 +2203,7 @@ a {
   background: transparent;
   box-shadow: none;
   translate: -369px 59px;
-  scale: 0.74;
+  scale: 0.518;
   transform: translateZ(38px) rotateZ(0deg);
 }
 
@@ -2252,7 +2252,7 @@ a {
 
 .showcase[data-active="braincell"]:not(.is-braincell-closing) .braincell-feature--sources {
   box-shadow: none;
-  scale: 1.35;
+  scale: 0.945;
   translate: clamp(-44px, calc(38vw - 547.2px), 0px) 0;
   transform: translateZ(38px) rotateZ(0.9deg);
   transition-delay: 180ms;
